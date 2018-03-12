@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue 入门</title>
+    <style>
+        .box{
+            width: 100px;
+            height:100px;
+            border:1px solid ;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <!--这样引入的时候只是引入了相对应的val值-->
+    <!--<p>{{h}}</p>   &lt;!&ndash;Hello World&ndash;&gt;-->
+    <!--<div>{{num}}</div>-->
+    <!--<p>{{arr}}</p>-->
+    <!--<div>{{r}}</div>  &lt;!&ndash; red &ndash;&gt;-->
+    <!--<div class="box" v-bind:style="{'background':r}">123</div>-->
+    <!--<div class="box" :style="{'background':r}"></div>-->
+    <!--<div v-bind:class="classObject"></div>-->
+    <!--<div v-bind:class=[activeClass,errorClass]></div>-->
+    <div v-bind:class="[isActive ? activeClass : '']"></div>
+</div>
+<script src="vue.js"></script>
+<script>
+    //v-bing: 缩写: 绑定行间属性 class style
+    //computed:计算属性
+    new Vue({
+        el:'#app', //因为上面是id为app，如果class为app的时候 就是 （.app）
+        data:{
+            h:'Hello World',
+            num:20,
+            arr:[{name:'一刀'},2,3,4],
+            r:'red',
+            isActive:true,
+            error:null,
+            classObject: {
+                active: true,
+                'text-danger':false
+            },
+            activeClass: 'active',
+            errorClass: 'text-danger'
+        },
+        computed:{
+          classObject:function(){
+              return{
+                  active:this.isActive && this.error,
+                  'text-danger':this.error && this.error.type === 'false'
+              }
+          }
+        }
+    })
+</script>
+</body>
+</html>
