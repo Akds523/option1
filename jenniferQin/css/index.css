@@ -1,0 +1,206 @@
+/*share css start*/
+.container .share{
+    margin:30px 20px;
+    overflow:hidden;
+}
+.container .share figure img {
+    display: block;
+    margin: auto;
+    height: 256px;
+    overflow: hidden;
+}
+.container .share figure p {
+    font-size: 14px;
+    text-shadow: #fff 1px 1px 0;
+    line-height: 26px;
+    text-align: center;
+    font-weight: bold;
+}
+.container .share figure p a {
+    color: #226039;
+}
+.container .share figure figcaption {
+    padding: 10px;
+    line-height: 22px;
+    color: #666;
+}
+.container .share figure ul {
+    background:  no-repeat center;
+    overflow: hidden;
+    height: 256px;
+    margin-bottom: 20px
+}
+.container .share figure ul span {
+    opacity: 0
+}
+.container .share figure ul:hover span {
+    opacity: 1
+}
+.container .share figure ul a {
+    position: relative;
+    display: block
+}
+.container .share figure{
+    background-color:#ececec;
+    border:#fff 10px solid;
+    width:270px;
+    height:430px;
+    float:left;
+    margin:0 8px 0;
+}
+.share figure ul span {
+    position: absolute;
+    left: 0; top: 0;
+    background: rgba(0,0,0,0.5) url(../images/yu.png) no-repeat center 10px;
+    color: #FFF;
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 256px;
+    text-align: center;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    text-decoration: underline
+}
+/*share css end*/
+/*time line css start*/
+.tm_timeLine{
+    margin:30px 0 0 0;
+    padding:0;
+    list-style:none;
+    position:relative;
+}
+.tm_timeLine ul{
+    list-style:none;
+}
+.tm_timeLine ul li{
+    position:relative;
+}
+.tm_timeLine > li .tm_time{
+    display:block;
+    width:100px;
+    padding-right:30px;
+    position:absolute;
+    margin-left:20px;
+}
+/*time line css start*/
+/*time zhou */
+.tm_timeLine:before{
+    content:'';
+    position:absolute;
+    top:0;
+    bottom:0;
+    width:5px;
+    background-color:#afdcf8;
+    left:158px;
+    margin-left:-10px;
+}
+/*time*/
+.tm_timeLine > li .tm_time span{
+    display:block;
+    text-align:right;
+}
+.tm_timeLine > li .tm_time span:first-child{
+    font-size:14px;
+    color:#bdd0db;
+}
+.tm_timeLine > li .tm_time span:last-child{
+    font-size:22px;
+    color:#3594cb;
+}
+.tm_timeLine > li:nth-child(odd) .tm_time span:last-child {
+    color: #6cbfee;
+}
+/*time icon*/
+.tm_timeLine > li .tm_timeIcon{
+    width:10px;
+    height:10px;
+    font-family:'ecoico';
+    speak:none; /*����*/
+    font-style:normal;
+    font-weight:normal;
+    font-variant: normal;
+    text-decoration: none;
+    font-size:1.4em;
+    line-height:4px;
+    -webkit-font-smoothing:antialiased;
+    position:absolute;
+    color:#fff;
+    background-color:#46a4da;
+    border-radius:50%;
+    text-align:center;
+    left:170px;
+    top:15px;
+    margin:0 0 0 -25px;
+}
+/*time label*/
+.tm_timeLine > li .tm_timeLabel{
+    margin:0 30px 15px 180px;
+    background:#579dc5; /*#3594cb*/
+    color:#fff;
+    padding:2em;
+    position:relative;
+    border-radius:5px; /**/
+    height:150px;
+}
+.tm_timeLine > li:nth-child(odd) .tm_timeLabel {
+    background-color: #579dc5;
+}
+.tm_timeLine > li .tm_timeLabel h2 {
+    margin-top: 0;
+    padding: 0 0 10px 0;
+    font-size: 16px;
+    text-shadow: rgba(7, 84, 152, 0.71) 1px 1px 1px;
+}
+.tm_timeLine > li .tm_timeLabel:after {
+    right: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-right-color: #3594cb;
+    border-width: 10px; top: 10px; }
+.tm_timeLine > li:nth-child(odd) .tm_timeLabel:after {
+    border-right-color: #579dc5;
+}
+.blogPic {
+    width: 200px;
+    height: 120px;
+    overflow: hidden;
+    display: block;
+    float: left;
+    margin-right: 20px;
+}
+.blogPic img {
+    width: 59%;
+    height: auto;
+    margin: auto;
+}
+a.reade {
+    background: #075498;
+    color: #fff;
+    padding: 5px 10px;
+    float: right;
+    margin: 20px 0 0 0;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.tm_timeLine li .tm_time {
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+}
+.tm_timeLine li:hover .tm_timeIcon {
+    box-shadow: 0 0 0 3px #ececec;
+}
+.tm_timeLine li:hover .tm_timeIcon {
+    background: #afdcf8;
+    border-radius: 20px 0 0 20px;
+}
+.tm_timeLine li:hover .tm_timeIcon span {
+    color: #fff;
+}

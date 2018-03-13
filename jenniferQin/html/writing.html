@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/write.css">
+    <link rel="stylesheet" href="../css/write2.css">
+    <link rel="stylesheet" href="../css/writing.css">
+</head>
+<body>
+<div class="main">
+    <div class="body container">
+        <div class="page-title">
+            <h2>撰写新文章</h2>
+        </div>
+        <div class="row page-main post-area" role="form">
+            <form action="https://care4u.top/index.php/action/contents-post-edit?_=e36fe03af8db2bad2c19c415bfc5e077" method="post" name="write_post">
+                <div class="col-mb-12 col-tb-9" role="main">
+
+                    <p class="title">
+                        <label for="title" class="sr-only">标题</label>
+                        <input type="text" id="title" name="title" autocomplete="off" value="" placeholder="标题" class="w-100 text title" />
+                    </p>
+                    <p class="mono url-slug">
+                        <label for="slug" class="sr-only">网址缩略名</label>
+                        空气净化器
+                        <input type="text" id="slug" name="slug" autocomplete="off" value="" class="mono" />
+                        .html
+                    <div class="wmd-edittab">
+                    <a href="">撰写</a>
+                    <a href="">预览</a>
+                    </div>
+                    <ul id="wmd-button-row" class="wmd-button-row">
+                        <li class="wmd-button" id="wmd-bold-button" title="加粗 <strong> Ctrl+B" style="left:0">
+                            <span style="background-position:0 0"></span>
+                        </li>
+                        <li class="wmd-button" id="wmd-italic-button" title="斜体 <strong> Ctrl+I" style="left:25px">
+                            <span style="background-position:-20px 0"></span>
+                        </li>
+                        <li class="wmd-spacer wmd-spacer1" id="wmd-spacer1"></li>
+                        <li class="wmd-button" id="wmd-link-button" title="链接 <a> Ctrl+L" style="left:75px">
+                            <span style="background-position:-40px 0"></span>
+                        </li>
+                        <li class="wmd-button" id="wmd-quote-button" title="引用 <blockquote> Ctrl+Q" style="left:100px">
+                            <span style="background-position:-60px 0"></span>
+                        </li>
+                        <li class="wmd-button" id="wmd-code-button" title="代码 <pre><code> Ctrl+K" style="left:125px">
+                            <span style="background-position:-80px 0"></span>
+                        </li>
+                        <li class="wmd-button" id="wmd-image-button" title="图片 <img> Ctrl+G" style="left:150px">
+                            <span style="background-position:-100px 0"></span>
+                        </li>
+                        <li class="wmd-spacer wmd-spacer2" id="wmd-spacer2"></li>
+                        <li class="wmd-button" id="wmd-olist-button" title="数字列表 <ol> Ctrl+O" style="left:200px">
+                            <span style="background-position:-120px 0"></span>
+                        </li>
+                        <li class="wmd-button" id="wmd-ulist-button" title="普通列表 <ul> Ctrl+U" style="left:225px">
+                            <span style="background-position:-140px 0"></span>
+                        </li>
+                        <li class="wmd-button" id="wmd-heading-button" title="标题 <h1>/<h2> Ctrl+H" style="left:250px">
+                            <span style="background-position:-160px 0"></span>
+                        </li>
+                        <li class="wmd-button" id="wmd-hr-button" title="分割线 <hr> Ctrl+R" style="left:275px">
+                            <span style="background-position:-180px 0"></span>
+                        </li>
+                        <li class="wmd-button" id="wmd-more-button" title="摘要分割线 <!--more--> Ctrl+M" style="left:300px">
+                            <span style="background-position:-280px 0"></span>
+                        </li>
+                        <li class="wmd-spacer wmd-spacer3" id="wmd-spacer3"></li>
+                        <li class="wmd-button" id="wmd-undo-button" title="撤销 - Ctrl+Z" style="left:350px">
+                            <span style="background-position:-200px -20px"></span>
+                        </li>
+                        <li class="wmd-button" id="wmd-redo-button" title="重做 - Ctrl+Y" style="left:375px">
+                            <span style="background-position:-220px -20px"></span>
+                        </li>
+                        <li class="wmd-spacer wmd-spacer4" id="wmd-spacer4"></li>
+                        <li class="wmd-button" id="wmd-fullscreen-button" title="全屏 - Ctrl+J" style="left:425px">
+                            <span style="background-position:-240px 0"></span>
+                        </li>
+                        <li class="wmd-button" id="wmd-exit-fullscreen-button" title="退出全屏 - Ctrl+E" style="left:450px ;display:none" >
+                            <span style="background-position:-260px 0"></span>
+                        </li>
+                    </ul>
+                    </p>
+                    <p>
+                        <label for="text" class="sr-only">文章内容</label>
+                        <textarea style="height: 543px" autocomplete="off" id="text" name="text" class="w-100 mono"></textarea>
+                    </p>
+
+                    <section id="custom-field" class="post-option fold">
+                        <label id="custom-field-expand" class="label"><a href="##"><i class="i-caret-right"></i> 自定义字段</a></label>
+                        <table class="list-table mono">
+                            <colgroup>
+                                <col width="25%"/>
+                                <col width="10%"/>
+                                <col width="55%"/>
+                                <col width="10%"/>
+                            </colgroup>
+                            <tr>
+                                <td>
+                                    <label for="fieldname" class="sr-only">字段名称</label>
+                                    <input type="text" name="fieldNames[]" placeholder="字段名称" id="fieldname" class="text-s w-100">
+                                </td>
+                                <td>
+                                    <label for="fieldtype" class="sr-only">字段类型</label>
+                                    <select name="fieldTypes[]" id="fieldtype">
+                                        <option value="str">字符</option>
+                                        <option value="int">整数</option>
+                                        <option value="float">小数</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <label for="fieldvalue" class="sr-only">字段值</label>
+                                    <textarea name="fieldValues[]" placeholder="字段值" id="fieldvalue" class="text-s w-100" rows="2"></textarea>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-xs">删除</button>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="description clearfix">
+                            <button type="button" class="btn btn-xs operate-add">+添加字段</button>
+                            自定义字段可以扩展你的模板功能, 使用方法参见 <a href="http://docs.typecho.org/help/custom-fields">帮助文档</a>                        </div>
+                    </section>
+
+                    <p class="submit clearfix">
+                        <span class="right">
+                            <input type="hidden" name="cid" value="" />
+                            <button type="submit" name="do" value="save" id="btn-save" class="btn">保存草稿</button>
+                            <button type="submit" name="do" value="publish" class="btn primary" id="btn-submit">发布文章</button>
+                                                        <input type="hidden" name="markdown" value="1" />
+                                                    </span>
+                    </p>
+
+                </div>
+
+                <div id="edit-secondary" class="col-mb-12 col-tb-3" role="complementary">
+                    <ul class="option-tabs clearfix">
+                        <li class="active w-50"><a href="#tab-advance">选项</a></li>
+                        <li class="w-50"><a href="#tab-files" id="tab-files-btn">附件</a></li>
+                    </ul>
+
+
+                    <div id="tab-advance" class="tab-content">
+                        <section class="post-option" role="application">
+                            <label for="date" class="label">发布日期</label>
+                            <p><input class="date w-100" type="text" name="date" id="date" value="" /></p>
+                        </section>
+
+                        <section class="post-option category-option">
+                            <label class="label">分类</label>
+                            <ul>
+                                <li><input type="checkbox" id="category-1" value="1" name="category[]" />
+                                    <label for="category-1">默认分类</label></li>
+                                <li><input type="checkbox" id="category-5" value="5" name="category[]" />
+                                    <label for="category-5">Linux</label></li>
+                                <li><input type="checkbox" id="category-7" value="7" name="category[]" />
+                                    <label for="category-7">记录</label></li>
+                                <li><input type="checkbox" id="category-22" value="22" name="category[]" />
+                                    <label for="category-22">数据库</label></li>
+                            </ul>
+                        </section>
+
+                        <section class="post-option">
+                            <label for="token-input-tags" class="label">标签</label>
+                            <p><input id="tags" name="tags" type="text" value="" class="w-100 text" /></p>
+                        </section>
+                    </div><!-- end #tab-advance -->
+                    <div id="tab-files" class="tab-content hidden">
+                        <div id="upload-panel" class="p">
+                            <div class="upload-area" draggable="true">拖放文件到这里<br>或者 <a href="###" class="upload-file">选择文件上传</a></div>
+                            <ul id="file-list">
+                            </ul>
+                        </div>
+                    </div><!-- end #tab-files -->
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
