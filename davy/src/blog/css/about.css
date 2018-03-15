@@ -1,0 +1,237 @@
+/*banner start*/
+.banner{
+    background:url(../images/travel.png) no-repeat -350px center;
+    height:240px;
+    line-height:30px;
+    color:#333;
+    padding:40px 0 0 0;
+    overflow:hidden;
+    margin:30px;
+    text-align:center;
+    text-shadow:#fff 1px 1px 0;
+}
+.davy_road{
+    overflow:hidden;
+    position:relative;
+    padding:60px;
+}
+.time_road{
+    background-color:#e9f5fb;
+    width:100%;
+    height:6px;
+    animation:time_a 5s;
+    -moz-animation: time_a 5s; /* Firefox */
+    -webkit-animation: time_a 5s; /* Safari and Chrome */
+    -o-animation: time_a 5s; /* Opera */
+}
+/*time animation*/
+@keyframes time_a { 0% {
+    width:0;
+}
+    25% {
+        width:250px;
+    }
+    50% {
+        width:500px;
+    }
+    100% {
+        width:840px;
+    }
+}
+@-moz-keyframes time_a /* Firefox */ { 0% {
+    width:0;
+}
+    25% {
+        width:250px;
+    }
+    50% {
+        width:500px;
+    }
+    100% {
+        width:840px;
+    }
+}
+@-webkit-keyframes time_a /* Safari and Chrome */ { 0% {
+    width:0;
+}
+    25% {
+        width:250px;
+    }
+    50% {
+        width:500px;
+    }
+    100% {
+        width:840px;
+    }
+}
+@-o-keyframes time_a /* Opera */ { 0% {
+    width:0;
+}
+    25% {
+        width:250px;
+    }
+    50% {
+        width:500px;
+    }
+    100% {
+        width:840px;
+    }
+}
+.data_view{
+    position:absolute;
+    top: -50px;
+    left: 20px;
+    display:block;
+    width:80px;
+    background:url(../images/dtime.png) no-repeat;
+    color:#fff;
+    height:46px;
+    line-height:30px;
+    text-align:center;
+}
+.davy_road ul li a{
+    margin-top:30px;
+    display:block;
+    color:#fff;
+}
+.davy_road ul li a:hover{
+    text-decoration: underline
+}
+.davy_road ul li::before{
+    content: "";
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    position: absolute;
+    background: #0979b1;
+    border: 3px solid #e9f6fb;
+}
+.davy_road ul li:hover::before {
+    background: #075498;
+    border: 3px solid #e9f6fb;
+}
+.davy_road ul li.time1{
+    position:absolute;
+    top:54px;
+    left:90px;
+}
+.davy_road ul li.time2{
+    position:absolute;
+    top:54px;
+    left:220px;
+}
+.davy_road ul li.time3{
+    position:absolute;
+    top:54px;
+    left:390px;
+}
+.davy_road ul li.time4{
+    position:absolute;
+    top:54px;
+    left:580px;
+}
+.davy_road ul li.time5{
+    position:absolute;
+    top:54px;
+    left:790px;
+}
+.about_life h2{
+    font-size:22px;
+    margin-bottom:20px;
+    background-color:#2a7497;
+    padding:10px 0;
+    width:200px;
+    text-align:center;
+    border-radius: 0 30px 30px 0;
+    box-shadow: #21566f 1px 1px 1px;
+    border-left: #dae1e4 6px solid;
+}
+.about_life p{
+    margin-bottom:20px;
+}
+.about_c {
+    padding: 10px 0 0 10px;
+    color: #999;
+    line-height: 26px;
+}
+.about_c img {
+    margin: 5px 0;
+}
+.about_c span {
+    color: #19A566 ;
+}
+a.blog_link {
+    color: #95cdff;
+    margin: 0 20px ;
+}
+h4.atitle {
+    font-size: 18px;
+    margin-bottom: 30px;
+    /* text-align: center; */
+}
+h4.atitle span{
+    float:right;
+    color:#fff;
+}
+.gbko {
+    background: rgb(255, 255, 255);
+    padding: 0 30px 30px 30px;
+    margin: 30px;
+    border-radius: 15px;
+}
+.otherlink{
+    overflow: hidden;
+}
+.otherlink ul {
+    margin: 10px 0;
+}
+.otherlink li {
+    line-height: 24px;
+    height: 24px;
+    display: block;
+    width: 290px;
+    float: left;
+    overflow: hidden;
+    margin-right: 30px;
+}
+.otherlink li a:hover{
+    text-decoration:underline;
+}
+.infops{
+    margin:0 0 20px 0;
+}
+.infops p{
+    line-height:24px;
+    margin-bottom: 5px;
+}
+.about p img{
+    margin:auto;
+}
+.bt-blue{
+    background:  20px center #47A9FF;
+    padding:5px 10px 5px 20px;
+    width:90px;
+    text-align:center;
+    line-height:40px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+.bt-blue a{
+    color:#fff;
+}
+.ps{
+    color:#4bcfef;
+}
+.shili {
+    background-color: rgb(34, 26, 189);
+    padding: 10px;
+    border: 1px dotted rgb(119, 136, 85);
+    word-wrap: break-word;
+}
+.bt-cs{
+    background:#f90;
+    padding:5px 10px;
+}
+.bt-cs a{
+    color:#fff;
+}
