@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax 封装</title>
+</head>
+<body>
+    <input type="text" id="username">
+    <ul id="ul"></ul>
+    <script>
+        const username = document.getElementById('username');
+        username.onkeyup = function(){
+            let os = document.creatElement('script');//创建一个script标签
+            os.src = 'https://sug.so.360.cn/suggest?callback=fn&encodein=utf-8&encodeout=utf-8&format=json&fields=word&word='+this.value;';//百度......数据的接口
+            document.getElementByTagName('head')[0].appendChild('os');//给head标签里面添加创建的script标签
+        }
+        function fn(data){  //callback=fn 这个fn
+            let html = '';
+            data.result.forEach(e=>{  //
+                html += `<li>e.word</li>`
+            });
+            ul.innerHTML = html;
+        }
+        //封装ajax
+        function ajax(json){
+            var opt = {
+                url:'',
+                success:function(){},
+                fail:function(){},
+                type:'get',
+                dataType:'json',
+                data:{},
+                asy:true,
+                cache:ture
+            };
+            for(var attr in json){
+                opt[attr] = json[attr];
+            }
+            console.log(attr)
+            var ajax = new XMLHttpRequest;
+            var arr = [];
+            for(var attr in opt.data){
+                arr.push(attr += '=' + opt.data[attr])
+            }
+            opt.data = arr.join('&');
+            if(opt.type === 'get'){
+                //get方式有缓存，当第一次请求浏览器的时候就已经存在了本地里面，这样会不安全
+                //当多次请求的时候就会往本地取
+                //ajax.open('get',opt.url + '?' + opt.data + '&' + (opt.cache?+new Date:''),opt.asy);
+                ajax.open('get',opt.url + '?' + opt.data + '&' + (opt.cache?+new Date:''),opt.asy); //ajax.open('get/post','url',是否异步)
+                ajax.onreadystatechange = ready;//会多监听一次
+                /*
+                  onreadystatechange 可以监听ajax执行的步骤过程 如果把onreadystatechange 放在send之前就可以多监听一次
+                  0-4 有5步，0监听不到
+                             4步骤全部走完
+                    这个过程：0：请求初始化
+                              1：服务器连接已建立
+                              2：请求已接受
+                              3：请求处理中
+                              4：请求已完成，且响应已就绪
+                 */
+                ajax.send();
+            }else if(opt.type === 'post'){ //post 不会有缓存
+                ajax.open('post',opt.url,opt.asy);
+                ajax.onreadystatechange = ready;
+                ajax.setRequestHeader('Content-Type','application/x-www/form-urlencoded');
+                ajax.send();
+            }
+            function render(){//状态码  code
+                if(ajax.readyState === 4){ //请求成功
+                    if(ajax.status >= 200 && ajax.status <= 207){
+
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
